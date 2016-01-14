@@ -57,5 +57,5 @@ That's it.
 
 ### Thanks
 
-This boilerplate is based on https://github.com/choonkending/react-webpack-node which is great!
-The `readyOnActions` component api is inspired by https://github.com/DominicTobias/universal-react
+- This boilerplate is based on https://github.com/choonkending/react-webpack-node which is great!
+- The `readyOnActions` component api is inspired by https://github.com/DominicTobias/universal-react
