@@ -1,7 +1,7 @@
 {
   "name": "react-universal-boilerplate",
   "version": "0.0.1",
-  "description": "A boilerplate to build serverside rendering applications, that get its data from a RESTful API.",
+  "description": "Boilerplate to build serverside rendered react applications, that get its data from an external RESTful API.",
   "main": "index.js",
   "author": "Gabriel Vergnaud",
   "scripts": {
