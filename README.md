@@ -9,6 +9,7 @@ Boilerplate to build serverside rendered react applications, that get its data f
 - scss
 - async action && serverside data fetching made easy
 
+### Usage
 first launch
 ```
 npm run build && npm run dev
@@ -25,5 +26,33 @@ npm run build && npm start
 npm run test
 ```
 
+### Serverside data fetching
+
+Just create an async action :
+```js
+import { createAsyncTypes } from 'utils/moduleHelpers'
+
+export const getData = () => ({
+  type: CALL_API,
+  types: createAsyncTypes('GET'),
+  promise: (Api) => Api.getThings()
+})
+```
+
+then add a static `readyOnActions` method returning a array of async actions
+```js
+class MyComponent extends React.Component {
+
+  static readyOnActions = (dispatch, location, params) => [
+    () => dispatch(getData())
+  ]
+
+  render() {
+    // ...
+  }
+}
+```
+
+That's it.
 
 This boilerplate is based on https://github.com/choonkending/react-webpack-node
