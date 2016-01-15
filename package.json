@@ -4,7 +4,6 @@
   "description": "Boilerplate to build serverside rendered react applications, that get its data from an external RESTful API.",
   "main": "index.js",
   "author": "Gabriel Vergnaud",
-  "license": "MIT",
   "scripts": {
     "clean": "rimraf public",
     "start": "NODE_ENV=production node server/index.js",
