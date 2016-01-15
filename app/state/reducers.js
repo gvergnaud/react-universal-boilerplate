@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { routeReducer as routing } from 'redux-simple-router'
-import counter from './counter'
-import starwarsCharacters from './starwarsCharacters'
+import counter from './modules/counter'
+import starwarsCharacters from './modules/starwarsCharacters'
 
 const rootReducer = combineReducers({
   routing,

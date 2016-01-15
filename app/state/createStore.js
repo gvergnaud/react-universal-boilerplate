@@ -1,5 +1,5 @@
 import { createStore as createReduxStore, compose, applyMiddleware } from 'redux'
-import rootReducer from 'state/modules/reducers'
+import rootReducer from 'state/reducers'
 import thunk from 'redux-thunk'
 import callApi from 'state/middleware/callApi'
 import errorCatcher from 'state/middleware/errorCatcher'
@@ -25,8 +25,8 @@ export default function createStore(initialState) {
   const store = createStoreWithMiddleware(rootReducer, initialState)
   if (module.hot) {
     // Enable Webpack hot module replacement for ./modules/reducers
-    module.hot.accept('state/modules/reducers', () => {
-      const nextReducer = require('state/modules/reducers')
+    module.hot.accept('state/reducers', () => {
+      const nextReducer = require('state/reducers')
       store.replaceReducer(nextReducer)
     })
   }
