@@ -2,7 +2,6 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import { RoutingContext, match } from 'react-router'
 import { Provider } from 'react-redux'
-import { curry, compose } from 'ramda'
 
 import routes from 'routes'
 import createStore from 'state/createStore'
@@ -17,7 +16,7 @@ const defaultHead = {
 }
 
 // renderFullPage :: Head -> { HTML, State } -> HTML
-const renderPage = curry((head = defaultHead, { content, initialState }) => (
+const renderPage = (head = defaultHead, { content, initialState }) => (
   `
   <!doctype html>
     <html lang="">
@@ -40,10 +39,10 @@ const renderPage = curry((head = defaultHead, { content, initialState }) => (
     </body>
     </html>
   `
-))
+)
 
 // hydrate :: renderProps -> Store -> { HTML, State }
-const hydrate = curry((renderProps, store) => {
+const hydrate = (renderProps, store) => {
   const initialState = store.getState()
   const content = renderToString(
     <Provider store={store}>
@@ -51,7 +50,7 @@ const hydrate = curry((renderProps, store) => {
     </Provider>
   )
   return { content, initialState }
-})
+}
 
 
 export default function render(req, res) {
