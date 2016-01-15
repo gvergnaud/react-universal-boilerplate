@@ -19,10 +19,9 @@ if (isDev) {
   app.use(require('webpack-hot-middleware')(compiler))
 }
 
-
 require('./config/express')(app)
 
 // render Application
-app.get('*', renderApp)
+app.get('*', renderApp.default)
 
 app.listen(app.get('port'))

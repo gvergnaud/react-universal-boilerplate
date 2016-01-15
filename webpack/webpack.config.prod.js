@@ -13,13 +13,14 @@ var commonLoaders = [
      */
     test: /\.js$|\.jsx$/,
     loaders: ['babel'],
-    include: path.join(__dirname, "..",  "app")
+    include: path.join(__dirname, "..",  "app"),
+    exclude: /node_modules/
   },
   { test: /\.json$/, loader: "json-loader" },
   { test: /\.png$/, loader: "url-loader" },
   { test: /\.jpg$/, loader: "file-loader" },
   { test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module&localIdentName=[local]__[hash:base64:5]!autoprefixer-loader!sass?includePaths[]=' 
+    loader: ExtractTextPlugin.extract('style-loader', 'css-loader?module&localIdentName=[local]__[hash:base64:5]!autoprefixer-loader!sass?includePaths[]='
       + encodeURIComponent(path.resolve(__dirname, '..', 'app', 'scss')))
   }
 ];

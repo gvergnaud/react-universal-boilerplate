@@ -43,6 +43,10 @@ class Starwars extends Component {
   }
 }
 
+<<<<<<< HEAD:app/containers/views/Starwars/Starwars.js
 
 
 export default connect(stateToProps, bindActions)(Starwars)
+=======
+export default connect(stateToProps, bindActions)(StarwarsContainer)
+>>>>>>> 9b3be81... update to babel 6.3.X:app/containers/StarwarsContainer.js
