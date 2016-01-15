@@ -1,10 +1,10 @@
 import React from 'react'
 import Route from 'react-router'
 
-import App from 'components/App'
-import Counter from 'containers/Counter'
-import NotFound from 'containers/NotFound'
-import Starwars from 'containers/Starwars'
+import App from 'containers/views/App'
+import Counter from 'containers/views/Counter'
+import NotFound from 'containers/views/NotFound'
+import Starwars from 'containers/views/Starwars'
 
 export default (
   <Route component={App}>

@@ -16,7 +16,7 @@ import mscon from 'file!images/ms-ninja144-precomposed.png';
 import favicon from 'file!images/favicon.png';
 
 const config = {
-  title: 'Metropolis',
+  title: 'React Universal boilerplate',
   link: [
     // Add to homescreen for Chrome on Android
     { "rel": "icon", "href": favicon },
