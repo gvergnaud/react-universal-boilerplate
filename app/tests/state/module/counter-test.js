@@ -9,7 +9,7 @@ describe('Counter reducer', () => {
 
   it('Should increment', () => {
     expect(
-      reducer(undefined, { type: types.INCREMENT.REQUEST })
+      reducer(undefined, { type: types.INCREMENT })
     ).toEqual({
       count: 1
     })
@@ -17,7 +17,7 @@ describe('Counter reducer', () => {
 
   it('Should decrement', () => {
     expect(
-      reducer(undefined, { type: types.DECREMENT.REQUEST })
+      reducer(undefined, { type: types.DECREMENT })
     ).toEqual({
       count: -1
     })
