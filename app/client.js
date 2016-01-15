@@ -32,5 +32,5 @@ render(
 
 // add redux devtools
 if (window.__ENV__ === 'development') {
-  require('createDevToolsWindow')(store)
+  require('createDevToolsWindow').default(store)
 }
