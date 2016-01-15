@@ -6,6 +6,7 @@ Boilerplate to build serverside rendered react applications, that get its data f
 - react
 - redux
 - webpack
+- babel 6
 - scss
 - async action && serverside data fetching made easy
 
