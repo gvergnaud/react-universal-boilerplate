@@ -3,7 +3,11 @@ import canUseDOM from 'utils/canUseDOM'
 
 export const CALL_API = 'middleware.CALL_API'
 
-const Api = createApi(canUseDOM() ? require('utils/httpClient').default : require('utils/httpServer').default)
+const Api = createApi(
+  canUseDOM()
+    ? require('utils/httpClient').default
+    : require('utils/httpServer').default
+)
 
 const callApiMiddleware = ({ dispatch, getState }) => next => action => {
 
